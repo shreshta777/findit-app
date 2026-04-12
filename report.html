@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card center">
+
+<h2>Report Item</h2>
+
+<form method="POST">
+
+    <!-- Item Name -->
+    <input type="text" name="item_name" placeholder="Item Name" required>
+
+    <!-- Category -->
+    <select name="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="electronics">Electronics</option>
+        <option value="books">Books</option>
+        <option value="accessories">Accessories</option>
+        <option value="others">Others</option>
+    </select>
+
+    <!-- Location -->
+    <select name="location" required>
+        <option value="" disabled selected>Select Location</option>
+        <option value="AB1">AB1</option>
+        <option value="AB2">AB2</option>
+        <option value="AB3">AB3</option>
+        <option value="AB4">AB4</option>
+        <option value="AB5">AB5</option>
+        <option value="Library">Library</option>
+        <option value="Cafeteria">Cafeteria</option>
+        <option value="Hostel Block">Hostel Block</option>
+        <option value="Others">Others</option>
+    </select>
+
+    <!-- Date -->
+    <input type="date" name="date" required>
+
+    <!-- Description -->
+    <textarea name="description" placeholder="Description"></textarea>
+
+    <!-- Type -->
+    <select name="type" required>
+        <option value="" disabled selected>Select Type</option>
+        <option value="lost">Lost</option>
+        <option value="found">Found</option>
+    </select>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+{% endblock %}

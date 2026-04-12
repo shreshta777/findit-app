@@ -1,0 +1,219 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #243b6b, #2c4a85);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(30, 51, 90, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* MAIN CONTAINER */
+.container {
+    padding: 40px;
+}
+
+/* GRID (dashboard cards) */
+.grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* GLASS CARD */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    width: 260px;
+}
+
+/* CENTERED CARD (forms like login/report) */
+.card.center {
+    max-width: 700px;
+    margin: auto;
+    width: 100%;
+}
+
+/* HEADINGS */
+.card h2 {
+    margin-bottom: 25px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* FORM LAYOUT */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* TEXTAREA */
+textarea {
+    height: 100px;
+    padding-top: 12px;
+    resize: none;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* DATE INPUT FIX */
+input[type="date"] {
+    height: 50px;
+}
+
+/* SELECT FIX */
+select {
+    appearance: none;
+}
+
+/* BUTTON */
+button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0891b2, #0284c7);
+}
+
+/* LINKS */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* SEARCH RESULTS */
+#results {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* SMALL CARDS INSIDE SEARCH */
+#results .card {
+    width: 100%;
+}
+
+/* FIX SELECT DROPDOWN LOOK */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+select option {
+    background: #243b6b;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+
+p a {
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+
+/* MY ITEMS SPACING FIX */
+.container h1,
+.container h2 {
+    margin-bottom: 25px;
+}
+
+/* GRID IMPROVEMENT */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* CARD SPACING */
+.card {
+    margin-bottom: 10px;
+}
+
+.card b {
+    font-size: 18px;
+}
+
+.card {
+    line-height: 1.6;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.status.pending {
+    background: orange;
+    color: black;
+}
+
+.status.approved {
+    background: #22c55e;
+}
+
+.status.rejected {
+    background: #ef4444;
+}

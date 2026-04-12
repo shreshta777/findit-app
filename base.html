@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FindIt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🔍 FindIt</h2>
+    <div>
+        <a href="/dashboard">Home</a>
+        <a href="/report">Report</a>
+        <a href="/search">Search</a>
+        <a href="/my_items">My Items</a>
+        <a href="/my_claims">Claims</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>🔍 Find Matches</h2>
+
+<input type="text" id="searchInput" placeholder="Search item...">
+
+<div id="results"></div>
+
+<script>
+document.getElementById("searchInput").addEventListener("keyup", async () => {
+
+    let query = document.getElementById("searchInput").value;
+
+    let res = await fetch(`/search_items?q=${query}`);
+    let data = await res.json();
+
+    let output = "";
+
+    data.forEach(item => {
+        output += `
+        <div class="card">
+            <b>${item.item_name}</b><br>
+            ${item.location}<br>
+            <i>${item.description || "No description"}</i><br>
+            <a href="/claim/${item.id}">Claim</a>
+        </div>
+        `;
+    });
+
+    document.getElementById("results").innerHTML = output;
+});
+</script>
+
+{% endblock %}

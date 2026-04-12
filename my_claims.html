@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>My Collected Items</h2>
+
+{% if claims|length == 0 %}
+<p>No items collected yet 😕</p>
+{% else %}
+
+<div class="grid">
+
+{% for claim in claims %}
+<div class="card">
+    <b>{{ claim.item_name }}</b><br>
+    {{ claim.location }}<br>
+    <i>{{ claim.description }}</i><br>
+    <span style="color:#22c55e;">Collected ✅</span>
+</div>
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+{% endblock %}

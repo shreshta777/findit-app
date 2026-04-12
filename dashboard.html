@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Welcome, {{ user }}</h1>
+
+<div class="grid">
+    <div class="card">
+        <h3>Report Item</h3>
+        <a href="/report"><button>Go</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Search Items</h3>
+        <a href="/search"><button>Go</button></a>
+    </div>
+
+    <div class="card">
+        <h3>My Items</h3>
+        <a href="/my_items"><button>Go</button></a>
+    </div>
+
+    <div class="card">
+        <h3>My Claims</h3>
+        <a href="/my_claims"><button>Go</button></a>
+    </div>
+</div>
+
+{% endblock %}
