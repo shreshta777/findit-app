@@ -2,19 +2,18 @@ from flask import Flask, render_template, request, redirect, session, jsonify
 import mysql.connector
 import os
 
-from dotenv import load_dotenv
-load_dotenv()
-
 app = Flask(__name__)
 app.secret_key = "secret123"
 
+# DB CONNECTION
 def get_db():
     return mysql.connector.connect(
         host=os.environ.get("DB_HOST"),
         user=os.environ.get("DB_USER"),
         password=os.environ.get("DB_PASSWORD"),
         database=os.environ.get("DB_NAME"),
-        port=int(os.environ.get("DB_PORT", 3306))
+        port=int(os.environ.get("DB_PORT")),
+        connection_timeout=5
     )
 
 @app.route('/')
